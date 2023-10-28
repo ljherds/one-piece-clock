@@ -108,28 +108,77 @@
 @media screen and (max-width: 600px) {
     .container{
     width: 20%;
-    height: 100vh;
+    height: 50vh;
     background-color: rgba(0, 0,0,0.4);
     align-items: center;
     justify-content: center;
+    background-size: flex;
     }
     .background {
     background-image: url(Strawhat\ Pirates.jpg);
-    height: 170vh;
-    width:120vh;
+    height: 100vh;
+    width: 70vh;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: flex;
     }
     .clock {
     position: relative;
-    width: 650%;
-    height: 30vh;
+    width: 450%;
+    height: 20vh;
     background: rgba(128, 128, 128, 0.411);
     border-radius: 20px;
     border: 1px solid rgba(0, 0, 0, 0.377);
-    top: -36em;
-    right: -5em;
+    top: -22em;
+    right: -1em;
+    }
+    .clock .content #hour {
+    background-image: url(HD\ wallpaper_\ Anime\,\ One\ Piece\,\ Sanji\ \(One\ Piece\)\,\ auto\ post\ production\ filter.jfif);
+    background-size: cover;
+    background-position: center;
+    background-size: 3em;
+    height: 85px;
+    width: 90px;
+    }
+    .clock .content #minute {
+    background-image: url(Nika\ laughing.jfif);
+    background-size: cover;
+    background-position: center;
+    background-size: 1.5em;
+    height: 85px;
+    width: 90px;
+    
+    }
+    .clock .content #second {
+    background-image: url(@Getsesko.jfif);
+    background-size: cover;
+    background-position: center;
+    background-size: 3em;
+    height: 85px;
+    width: 90px;
+    }
+    .clock .content h2{
+    font-size: 4em;
+    color: white
+    }
+    .clock .content .dot{
+    font-size: 4em;
+    color: rgb(0, 0, 0)
+    }
+    .clock .content h2:nth-child(odd){
+    padding: 2x 2px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.959);
+    box-shadow: 0 2px 0 3px rgba(230, 230, 230, 0.616);
+    margin: 0 10px;
+    }
+    #AmPm{
+    position: relative;
+    top: -35px;
+    right: 4px;
+    font-size: 1em;
+    color: white;
+    font-weight: 700;
     }
 }
         </style>
