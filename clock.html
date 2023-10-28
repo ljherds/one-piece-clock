@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF - 8">
+        <meta name="viewport" content="width=device - width, initial-scale=1.0">
+        <title>Lj timer</title>
+        <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+::-webkit-scrollbar{
+    width: 0;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0,0,0.4);
+    align-items: center;
+    justify-content: center;
+}
+.background {
+    background-image: url(Strawhat\ Pirates.jpg);
+    height:100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@keyframes animate {
+    0%,100%{
+        transform: translateY(20px);
+    }
+    50%{
+        transfor: translateY(-20px);
+    }
+}
+.clock {
+    position: relative;
+    width: 40%;
+    height: 30vh;
+    background: rgba(128, 128, 128, 0.411);
+   
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.377);
+    top: -27.8em;
+    right: -27em;
+    
+}
+.clock .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+}
+.clock .content #hour {
+    background-image: url(HD\ wallpaper_\ Anime\,\ One\ Piece\,\ Sanji\ \(One\ Piece\)\,\ auto\ post\ production\ filter.jfif);
+    background-size: cover;
+    background-position: center;
+    background-size: 3em;
+}
+.clock .content #minute {
+    background-image: url(Nika\ laughing.jfif);
+    background-size: cover;
+    background-position: center;
+    background-size: 1.5em;
+    
+}
+.clock .content #second {
+    background-image: url(@Getsesko.jfif);
+    background-size: cover;
+    background-position: center;
+    background-size: 3em;
+}
+.clock .content h2{
+    font-size: 6em;
+    color: white
+   
+}
+
+.clock .content h2:nth-child(odd){
+    padding: 5px 5px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.959);
+    box-shadow: 0 5px 0 3px rgba(230, 230, 230, 0.616);
+    margin: 0 10px;
+   
+    
+}
+.clock .content h2#second {
+    color: white;
+}
+.clock .content h2#minute {
+    color: black;
+}
+#AmPm{
+    position: relative;
+    top: -50px;
+    font-size: 2em;
+    color: white;
+    font-weight: 700;
+}
+@media screen and (max-width: 600px) {
+    .container{
+    width: 20%;
+    height: 100vh;
+    background-color: rgba(0, 0,0,0.4);
+    align-items: center;
+    justify-content: center;
+    }
+    .background {
+    background-image: url(Strawhat\ Pirates.jpg);
+    height: 170vh;
+    width:120vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    .clock {
+    position: relative;
+    width: 650%;
+    height: 30vh;
+    background: rgba(128, 128, 128, 0.411);
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.377);
+    top: -36em;
+    right: -5em;
+    }
+}
+        </style>
+        
+        
+    </head>
+    <body>
+        <div class="container">
+        <div class="background"></div>
+        
+            <div class= "clock">
+                <div class="content">
+                    <h2 id="hour">00</h2>
+                    <h2 class="dot">:</h2>
+                    <h2 id="minute">00</h2>
+                    <h2 class="dot">:</h2>
+                    <h2 id="second">00</h2>
+                    <span id="AmPm">AM</span>
+                </div>  
+            </div>  
+        </div> 
+        
+        <script>
+            var showTime = () => {
+    console.log('run');
+
+    let hour = document.getElementById('hour');
+    let minute = document.getElementById('minute');
+    let second = document.getElementById('second');
+    let AmPm = document.getElementById('AmPm');
+    
+
+    let hh = new Date().getHours();
+    let mm = new Date().getMinutes();
+    let ss = new Date().getSeconds();
+
+    let slot = "AM";
+    if (hh>12){hh=hh-12;slot="PM"}
+    let doubleNum = (num) =>{
+        num = num <10 ? "0" + num : num;
+        return num;
+    }
+
+    let currentTime= new Date
+
+    hh= doubleNum(hh)
+    mm= doubleNum(mm)
+    ss= doubleNum(ss)
+
+    hour.innerHTML = hh;
+    minute.innerHTML = mm;
+    second.innerHTML = ss;
+    AmPm.innerHTML = slot;
+}
+setInterval(showTime,1000) 
+
+        </script>
+    </body>
+</html>
